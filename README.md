@@ -1,19 +1,31 @@
-# Verifence
+# Verifence Spam Shield for WordPress
 
-Verifence blocks disposable or throwaway email addresses during WordPress registration and commenting by checking emails against the API provided by [Verifence](https://Verifence.io), which is constantly updated to include the latest disposable email domains. This ensures your site stays protected against new disposable email providers.
+Verifence Spam Shield protects WordPress comments, login, and registration forms
+with Verifence Shield verification, local honeypot and rate-limit checks,
+disposable email blocking, URL scanning, block-list controls, and activity logs.
 
-## Features
-- Blocks disposable emails on comment submission.
-- Blocks disposable emails during user registration.
+## What It Protects
 
-## Installation
-1. Copy the plugin folder into your WordPress `wp-content/plugins/` directory.
-2. Activate **Verifence** from the Plugins screen.
-3. Go to **Settings → Verifence** and enter your API key.
+- Comment submissions, including direct POSTs missing a valid Shield token
+- Login forms, including nonce failures, honeypot checks, and brute-force limits
+- Registration forms, including disposable email, email rule, and block-list
+  checks
+- Suspicious URLs in comment bodies when URL scanning is enabled
+- Admin visibility through local event logs and per-event logging controls
 
 ## Requirements
-- WordPress 5.0+ (recommended)
-- PHP 7.4+ (recommended)
 
-## Notes
-- If the API key is missing or the API is unavailable, Verifence allows the email to avoid blocking legitimate users.
+- WordPress 5.9 or newer
+- PHP 7.4 or newer
+- Verifence platform API key
+- Verifence Shield site key and secret
+
+## Installation
+
+1. Upload this plugin folder to `wp-content/plugins/`.
+2. Activate **Verifence Spam Shield** in WordPress.
+3. Open **Verifence Spam Shield -> Settings**.
+4. Add your API key, Shield site key, and Shield secret.
+5. Enable the protections and log events you want.
+
+See `readme.txt` for the WordPress plugin readme and changelog.
